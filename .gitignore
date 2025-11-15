@@ -1,44 +1,101 @@
-dist
+# =========================
+# Node / Paket Yöneticisi
+# =========================
+node_modules/
+.pnp/
+.pnp.*
+.npm/
+.yarn/
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
-**/node_modules
-.pnpm-debug.log*
-.pnpm-store
+# pnpm store (global cache klasörü repo'ya gerek yok)
+pnpm-lock.yaml
+shrinkwrap.yaml
 
-# expo
-**/.expo/*
-
-# next.js
-**/.next/*
-/out/
-
-# tamagui
-**/.tamagui/*
-
-# production
-/build
-
-# debug
+# =========================
+# Log Dosyaları
+# =========================
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
 
-# local env files
+# =========================
+# OS / Editör Çöplükleri
+# =========================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# =========================
+# TypeScript
+# =========================
+*.tsbuildinfo
+next-env.d.ts
+
+# =========================
+# Next.js Output
+# =========================
+.next/
+out/
+dist/
+build/
+
+# =========================
+# Storybook
+# =========================
+storybook-static/
+.out/
+.temp_storybook/
+
+# Storybook config'i kalacak, sadece output ignore
+# .storybook/  # BUNU *SİLME*, STORYBOOK AYARLARIN BURADA
+
+# =========================
+# Test / Coverage
+# =========================
+coverage/
+.nyc_output/
+
+# =========================
+# Env Dosyaları
+# =========================
+.env
+.env.*.local
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-# vercel
-.vercel
+# Örnek env dosyan kalsın:
+!.env.example
 
-# typescript
-*.tsbuildinfo
+# =========================
+# Next.js / Vercel / Diğer
+# =========================
+.vercel/
+.turbo/
 
-# os
-.DS_Store
-THUMBS_DB
-thumbs.db
+# =========================
+# Tamagui
+# =========================
+.tamagui/       # Tamagui'nin generate ettiği cache/output klasörü
+.tamagui-env.d.ts
 
-# turbo build log
-**/.turbo/*
-apps/storybook/storybook-static
+# Eğer kendi design-system paketini build ediyorsan:
+packages/*/dist/
+packages/*/build/
+
+# =========================
+# MacOS / Temp
+# =========================
+*.tmp
+*.temp
