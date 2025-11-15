@@ -69,7 +69,7 @@ export const Tones: Story = {
   render: (args) => (
     <YStack gap="$3">
       <Patibutton {...args} tone="black">
-        Black tone
+        Black tone!
       </Patibutton>
       <Patibutton {...args} tone="red">
         Red tone
