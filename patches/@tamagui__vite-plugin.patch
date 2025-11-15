@@ -1,0 +1,20 @@
+diff --git a/dist/cjs/plugin.cjs b/dist/cjs/plugin.cjs
+index f4c15bdf924d42dfe0fb59bdb0cc2f648bc0e629..c27c56eef9a0eceb1fd191faef02780ad02db9b3 100644
+--- a/dist/cjs/plugin.cjs
++++ b/dist/cjs/plugin.cjs
+@@ -39,7 +39,14 @@ var Static = __toESM(require("@tamagui/static-worker"), 1),
+   import_vite = require("vite"),
+   import_extract = require("./extract.cjs"),
+   import_loadTamagui = require("./loadTamagui.cjs");
+-const import_meta = {},
++const import_meta = {
++    resolve(name) {
++      const resolvedPath = require.resolve(name, {
++        paths: [__dirname]
++      });
++      return (0, import_node_url.pathToFileURL)(resolvedPath).href;
++    }
++  },
+   resolve = name => (0, import_node_url.fileURLToPath)(import_meta.resolve(name));
+ function tamaguiPlugin({
+   optimize,

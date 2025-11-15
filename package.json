@@ -36,6 +36,9 @@
       "react-native-web": "~0.19.12",
       "metro": "0.81.0",
       "metro-resolver": "0.81.0"
+    },
+    "patchedDependencies": {
+      "@tamagui/vite-plugin": "patches/@tamagui__vite-plugin.patch"
     }
   },
   "dependencies": {
@@ -45,6 +48,7 @@
     "eslint": "^9.3.0",
     "husky": "^9.1.6",
     "prettier": "^3.3.3",
+    "react-native-web": "0.19.13",
     "turbo": "^1.13.4",
     "typescript": "~5.8.3",
     "ultra-runner": "^3.10.5",

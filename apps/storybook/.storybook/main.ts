@@ -23,8 +23,8 @@ const config: StorybookConfig = {
       ...(baseConfig.resolve ?? {}),
       alias: {
         ...(baseConfig.resolve?.alias ?? {}),
-        app: path.resolve(__dirname, '../../packages/app'),
-        'patilive-component-library': path.resolve(__dirname, '../../packages/ui'),
+        app: path.resolve(__dirname, '../../../packages/app'),
+        'patilive-component-library': path.resolve(__dirname, '../../../packages/ui/src'),
       },
     }
 
