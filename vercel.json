@@ -1,5 +1,5 @@
 {
-  "installCommand": "corepack enable && corepack prepare pnpm@9.12.3 --activate && pnpm install --frozen-lockfile",
+  "installCommand": "corepack enable && corepack prepare pnpm@9.12.3 --activate && pnpm install --no-frozen-lockfile",
   "buildCommand": "pnpm --filter storybook-app build-storybook",
   "outputDirectory": "apps/storybook/storybook-static"
 }
