@@ -1,0 +1,61 @@
+{
+  "name": "patilivecomponentlibrary",
+  "private": true,
+  "workspaces": [
+    "./apps/*",
+    "./packages/*"
+  ],
+  "scripts": {
+    "native": "pnpm --filter expo-app start",
+    "native:prebuild": "pnpm --filter expo-app prebuild",
+    "ios": "pnpm --filter expo-app ios",
+    "android": "pnpm --filter expo-app android",
+    "watch": "ultra -r --no-pretty --concurrency 400 watch",
+    "vercel:install": "pnpm install --frozen-lockfile",
+    "web": "pnpm --filter next-app dev",
+    "web:extract": "DISABLE_EXTRACTION=false pnpm --filter next-app dev",
+    "web:prod": "pnpm --filter next-app build",
+    "web:prod:serve": "pnpm --filter next-app serve",
+    "storybook": "pnpm --filter storybook-app storybook",
+    "storybook:build": "pnpm --filter storybook-app build-storybook",
+    "postinstall": "pnpm check-tamagui && pnpm build",
+    "build": "turbo run build",
+    "upgrade:tamagui": "pnpm up --latest \"*tamagui*\" \"@tamagui/*\"",
+    "upgrade:tamagui:canary": "pnpm up --tag canary \"*tamagui*\" \"@tamagui/*\"",
+    "check-tamagui": "tamagui check",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepare": "husky"
+  },
+  "pnpm": {
+    "overrides": {
+      "react": "19.0.0",
+      "react-dom": "19.0.0",
+      "react-refresh": "^0.14.0",
+      "react-native-svg": "15.11.2",
+      "react-native-web": "~0.19.12",
+      "metro": "0.81.0",
+      "metro-resolver": "0.81.0"
+    }
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.24.6",
+    "@tamagui/cli": "^1.138.0",
+    "check-dependency-version-consistency": "^4.1.0",
+    "eslint": "^9.3.0",
+    "husky": "^9.1.6",
+    "prettier": "^3.3.3",
+    "turbo": "^1.13.4",
+    "typescript": "~5.8.3",
+    "ultra-runner": "^3.10.5",
+    "vitest": "^2.1.1"
+  },
+  "packageManager": "pnpm@9.12.3",
+  "engines": {
+    "node": "22",
+    "npm": "10.8"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.3"
+  }
+}

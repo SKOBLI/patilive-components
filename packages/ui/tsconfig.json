@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["**/*.ts", "**/*.tsx", "../config/src/tamagui.config.ts"],
+  "compilerOptions": {
+    "composite": true,
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "moduleResolution": "node"
+  },
+  "references": [],
+  "exclude": ["dist", "types"]
+}

@@ -1,0 +1,59 @@
+{
+  "name": "patilive-component-library",
+  "version": "0.1.0",
+  "description": "Reusable Tamagui components that power Patilive projects.",
+  "sideEffects": [
+    "*.css"
+  ],
+  "private": false,
+  "types": "./types/index.d.ts",
+  "source": "./src/index.tsx",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "types",
+    "src"
+  ],
+  "scripts": {
+    "build": "tamagui-build",
+    "watch": "tamagui-build --watch"
+  },
+  "dependencies": {
+    "@tamagui/button": "^1.138.0",
+    "@patilive/config": "workspace:*",
+    "@tamagui/next-theme": "^1.138.0",
+    "@tamagui/stacks": "^1.138.0",
+    "@tamagui/toast": "^1.138.0",
+    "tamagui": "^1.138.0"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-native": ">=0.79.0"
+  },
+  "devDependencies": {
+    "@tamagui/build": "^1.138.0",
+    "@types/node": "^20.14.1",
+    "@types/react": "~19.0.10",
+    "@types/react-native": "^0.73.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "tamagui",
+    "design-system",
+    "react-native",
+    "nextjs",
+    "expo"
+  ]
+}

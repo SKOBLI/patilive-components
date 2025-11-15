@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["**/*.ts", "**/*.tsx"],
+  "compilerOptions": {
+    "composite": true,
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "paths": {
+      "app/*": ["./packages/app/*"],
+      "patilive-component-library/*": ["./packages/ui/*"]
+    }
+  },
+  "references": []
+}
